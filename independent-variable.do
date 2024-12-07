@@ -1,4 +1,4 @@
-// Last update: Oct 24, 2024
+// Last update: Dec 5, 2024
 
 // Brief description
 // This is a STATA do-file for computing independent variables.
