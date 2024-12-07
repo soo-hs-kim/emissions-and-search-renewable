@@ -12,6 +12,7 @@ This project investigates when firms explore environmental technology, which is 
 ### Data used for this project
 + For firms' technology search ... (used to contruct main dependent variable)
   + USPTO Patent data [patentsview](https://patentsview.org/download/data-download-tables)
+  + [DISCERN](https://www.sciencedirect.com/science/article/pii/S0048733321000214?via%3Dihub)
 + For firms' annual emissions ... (used to construct main independent variables)
   + Manual collection from firms' corporate sustainability reports and corporate websites
   + Carbon Disclosure Project (CDP) questionnaires (Proprietary data)
