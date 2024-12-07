@@ -1,5 +1,10 @@
+// Last update: Oct 24, 2024
+
+// Brief description
+// This is a STATA do-file for computing independent variables.
+
 ///////////// Historical Aspiration
-/// this code is based on the panel data (firm-year level)
+// this code is based on the panel data (firm-year level)
 {
 * (Step 1) generate lagged variables
 {
@@ -55,8 +60,8 @@ foreach x of numlist 1/9{
 
 
 ///////////// Social Aspiration
-/// this code is based on the panel data (firm-year level)
-/// yr_cnt_performance: number of firms who have performance information within each peer group
+// this code is based on the panel data (firm-year level)
+// yr_cnt_performance: number of firms who have performance information within each peer group
 {
 	gen denom_performance = (yr_cnt_performance - 1)                    if !missing(performance)
 			
@@ -78,9 +83,9 @@ foreach x of numlist 1/9{
 
 
 ///////////// Combined Aspiration
-/// this code is based on the panel data (firm-year level)
-/// his_8: historical aspiration (weight 0.8 for historical aspiration_t_1)
-/// soc_asp: social aspiration
+// This code is based on the panel data (firm-year level)
+// his_8: historical aspiration (weight 0.8 for historical aspiration_t_1)
+// soc_asp: social aspiration
 {
 * (Step 1) Construct combined aspiration by blending social and historical aspiration
 {
