@@ -63,8 +63,8 @@ foreach x of numlist 1/9{
 	bysort year peer_group: egen total_performance = total(performance) if !missing(performance)
 	gen numer_performance = (total_performance - performance)           if !missing(performance)
 			
-	gen soc_performance = (numer_performance/denom_performance) if !missing(performance)
-	gen dif_performance = (performance - soc_performance)       if !missing(performance)
+	gen soc_asp = (numer_performance/denom_performance) if !missing(performance)
+	gen dif_performance = (performance - soc_asp)       if !missing(performance)
 		
 	gen PERF_ABOVE_soc     = dif_performance if dif_performance > 0 & !missing(performance)
 	replace PERF_ABOVE_soc = 0               if dif_performance < 0 & !missing(performance)
@@ -80,19 +80,19 @@ foreach x of numlist 1/9{
 ///////////// Combined Aspiration
 /// this code is based on the panel data (firm-year level)
 /// his_8: historical aspiration (weight 0.8 for historical aspiration_t_1)
-/// soc_performance: social aspiration
+/// soc_asp: social aspiration
 {
 * (Step 1) Construct combined aspiration by blending social and historical aspiration
 {
-	gen soc_1_his_9 = 0.1*soc_performance + 0.9*his_8
-	gen soc_2_his_8 = 0.2*soc_performance + 0.8*his_8
-	gen soc_3_his_7 = 0.3*soc_performance + 0.7*his_8
-	gen soc_4_his_6 = 0.4*soc_performance + 0.6*his_8
-	gen soc_5_his_5 = 0.5*soc_performance + 0.5*his_8
-	gen soc_6_his_4 = 0.6*soc_performance + 0.4*his_8
-	gen soc_7_his_3 = 0.7*soc_performance + 0.3*his_8
-	gen soc_8_his_2 = 0.8*soc_performance + 0.2*his_8
-	gen soc_9_his_1 = 0.9*soc_performance + 0.1*his_8
+	gen soc_1_his_9 = 0.1*soc_asp + 0.9*his_8
+	gen soc_2_his_8 = 0.2*soc_asp + 0.8*his_8
+	gen soc_3_his_7 = 0.3*soc_asp + 0.7*his_8
+	gen soc_4_his_6 = 0.4*soc_asp + 0.6*his_8
+	gen soc_5_his_5 = 0.5*soc_asp + 0.5*his_8
+	gen soc_6_his_4 = 0.6*soc_asp + 0.4*his_8
+	gen soc_7_his_3 = 0.7*soc_asp + 0.3*his_8
+	gen soc_8_his_2 = 0.8*soc_asp + 0.2*his_8
+	gen soc_9_his_1 = 0.9*soc_asp + 0.1*his_8
 }
 
 * (Step 2) Construct variables
