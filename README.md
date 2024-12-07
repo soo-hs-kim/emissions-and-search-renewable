@@ -8,6 +8,8 @@ This project investigates when firms explore environmental technology, which is 
 ### What does this repository have?
 + independent-variable.do
   + STATA do-file for computing independent variables
++ result-tables.do
+  + STATA do-file for generating regression result tables
 
 ### Data used for this project
 + For firms' technology search ... (used to contruct main dependent variable)
