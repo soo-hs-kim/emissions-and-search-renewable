@@ -221,6 +221,3 @@ foreach num of numlist 3 4 5 6 7 {
 	display "This is the end of loop of Kuusela of peersize `num'"
 }
 
-* (Step 6) Merge the data from Step 5 with the main data and contruct variables using diff_ps`num' variables (`num': 3,4,5,6,7)
-}
-
