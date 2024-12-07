@@ -1,3 +1,5 @@
+##### Last update: Dec 7, 2024
+
 ## DESCRIPTION
 This is a code repository for the first project "CO2 emissions and search for renewable energy".
 
