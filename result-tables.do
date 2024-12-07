@@ -1,6 +1,9 @@
-//////////////////////// DO-FILE for result tables////////////////////////////////////
-*First created: Jan 20, 2024
-*Since our final dataset was constructed using proprietary data sources, we cannot publicy share the data. 
+// Last update: Oct 24, 2024
+// First created: Jan 20, 2024
+
+// Brief description
+// This is a STATA do-file for generating result tables (.csv). 
+// Since our final dataset was constructed using proprietary data sources, we cannot publicy share the data. 
 
 clear
 use "~\final_dataset.dta"
